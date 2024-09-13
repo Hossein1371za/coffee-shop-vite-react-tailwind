@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from "./components/Hero"
 
 const App = () => {
   return (
-    <div className='text-xl font-bold text-red-500'>App</div>
+    <div className='overflow-x-hidden'>
+      <Hero />
+    </div>
   )
 }
 
