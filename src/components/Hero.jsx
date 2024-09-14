@@ -41,7 +41,7 @@ const Hero = () => {
                 </h1>
               </div>
             </div>
-            <div className=" text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+            <div className="hidden lg:block text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
               <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14">
                 Black Tumbler
               </h1>
