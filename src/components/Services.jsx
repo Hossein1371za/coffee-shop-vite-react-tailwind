@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { motion } from "framer-motion";
+import {service} from "./ServicesData"
 
 const Services = () => {
+    const [sevices,setServices] = useState(service)
   return (
     <div className="container my-16 space-y-4">
       <div className="text-center max-w-lg mx-auto space-y-2">
@@ -12,18 +14,18 @@ const Services = () => {
             type: "spring",
             stiffness: 100,
             damping: 10,
-            delay: 1,
+            delay: 0.8,
           }}
           className=" text-3xl font-bold text-lightGray"
         >
           Fresh and <span className="text-primary">Tasty coffee</span>
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{
             type: "spring",
-            stiffness: 100,
+            stiffness: 150,
             damping: 15,
             delay: 1.2,
           }}
