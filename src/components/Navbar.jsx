@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav
       className={`${
         isActive ? "bg-gray-900/80 py-4 shadow-md" : "bg-none py-6"
-      } fixed top-0 left-0 w-full pt-10 text-white z-20`}
+      } fixed top-0 left-0 w-full pt-10 text-white z-20 transition-all duration-300`}
     >
       <div className="container">
         <div className="flex items-center justify-between">

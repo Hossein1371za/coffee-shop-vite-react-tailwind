@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <main className="bg-hero bg-no-repeat bg-center bg-cover">
+    <main className="bg-hero bg-no-repeat bg-center bg-cover pt-10">
       <section className="min-h-[750px] w-full">
         <div className="container">
           <Navbar />
