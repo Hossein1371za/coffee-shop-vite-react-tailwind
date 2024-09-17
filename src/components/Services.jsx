@@ -1,9 +1,34 @@
-import React,{useState} from "react";
-import { motion } from "framer-motion";
-import {service} from "./ServicesData"
+import React, { useState } from "react";
+import { delay, motion } from "framer-motion";
+import { service } from "./ServicesData";
+
+const cartVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 10,
+      ease: "easeInOut",
+    },
+  },
+};
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.6,
+      staggerChildren: 0.4,
+    },
+  },
+};
 
 const Services = () => {
-    const [sevices,setServices] = useState(service)
+  const [services, setServices] = useState(service);
+
   return (
     <div className="container my-16 space-y-4">
       <div className="text-center max-w-lg mx-auto space-y-2">
@@ -22,20 +47,49 @@ const Services = () => {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 0.5, scale: 1 }}
           transition={{
             type: "spring",
             stiffness: 150,
             damping: 15,
             delay: 1.2,
           }}
-          className="text-sm opacity-50"
+          className="text-sm text-lightGray"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation
         </motion.p>
       </div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView={"visible"}
+        viewport={{ amount: 0.8 }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+      >
+        {services.map((service) => (
+          <motion.div
+            variants={cartVariants}
+            key={service.id}
+            className="text-center p-4 space-y-6"
+          >
+            <img
+              className="img-shadow2 max-w-[200px] mx-auto hover:scale-110 transition-all duration-300 cursor-pointer"
+              src={service.image}
+              alt=""
+            />
+            <div className="space-y-2">
+              <h1 className="text-primary font-bold text-2xl">
+                {service.title}
+              </h1>
+              <p className="text-lightGray opacity-50 w-[50%] mx-auto">
+                {service.subtitle}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

@@ -1,19 +1,21 @@
+import coffee1 from "../assets/coffee/coffee1.png"
+import coffee3 from "../assets/coffee/coffee3.png"
 export const service = [
     {
         id:1,
-        image:"../assets/coffee/coffee1.png",
+        image:coffee3,
         title:"Black Coffee",
         subtitle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     },
     {
         id:2,
-        image:"../assets/coffee/coffee2.png",
+        image:coffee1,
         title:"hot Coffee",
         subtitle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     },
     {
         id:3,
-        image:"../assets/coffee/coffee1.png",
+        image:coffee3,
         title:"cold Coffee",
         subtitle:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     },
