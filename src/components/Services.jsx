@@ -1,30 +1,8 @@
 import React, { useState } from "react";
-import { delay, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { service } from "./ServicesData";
 
-const cartVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 150,
-      damping: 10,
-      ease: "easeInOut",
-    },
-  },
-};
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.6,
-      staggerChildren: 0.4,
-    },
-  },
-};
+
 
 const Services = () => {
   const [services, setServices] = useState(service);
@@ -62,15 +40,26 @@ const Services = () => {
         </motion.p>
       </div>
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView={"visible"}
-        viewport={{ amount: 0.8 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 10,
+          delay: 1,
+        }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
       >
         {services.map((service) => (
           <motion.div
-            variants={cartVariants}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 10,
+            delay: 1.2,
+          }}
             key={service.id}
             className="text-center p-4 space-y-6"
           >
