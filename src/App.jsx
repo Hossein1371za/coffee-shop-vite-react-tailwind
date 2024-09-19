@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <Hero />
       <Services />
       <WhereToBuy />
