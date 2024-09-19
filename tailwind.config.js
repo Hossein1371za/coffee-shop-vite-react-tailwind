@@ -14,7 +14,8 @@ export default {
         lightGray: "#272c35",
       },
       backgroundImage: {
-        hero : "url('./assets/bg-slate.png')"
+        hero : "url('./assets/bg-slate.png')",
+        bannerApp :"url('./assets/coffee-cover.jpg')"
       },
       container: {
         center: true,
