@@ -29,12 +29,12 @@ const AppBanner = () => {
           </div>
           <div className="flex justify-center items-center gap-4">
             <img
-              className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px] cursor-pointer"
+              className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px] cursor-pointer hover:scale-110 duration-300"
               src={AppStoreImg}
               alt=""
             />
             <img
-              className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px] cursor-pointer"
+              className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px] cursor-pointer hover:scale-110 duration-300"
               src={PlayStore}
               alt=""
             />
